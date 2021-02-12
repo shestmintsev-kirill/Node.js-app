@@ -19,8 +19,24 @@ class Course {
     };
   }
 
-  async save() {
+  static async update(course) {
     const courses = await Course.getAll();
+
+    const idx = courses.findIndex((c) => c.id === course.id);
+    courses[idx] = course;
+
+    return new Promise((resolve, reject) => {
+      fs.writeFile(path.join(__dirname, "..", "data", "courses.json"), JSON.stringify(courses), (err) => {
+        if (err) reject(err);
+        else {
+          resolve();
+        }
+      });
+    });
+  }
+
+  async save() {
+    const courses = await Course.getAll(); //получаю список всех курсов
     courses.push(this.toJson());
 
     return new Promise((resolve, reject) => {
@@ -42,6 +58,10 @@ class Course {
         }
       });
     });
+  }
+  static async getById(id) {
+    const courses = await Course.getAll(); //получаю список всех курсов
+    return courses.find((c) => c.id === id);
   }
 }
 

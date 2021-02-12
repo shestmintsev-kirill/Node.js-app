@@ -1,4 +1,1 @@
-[
-  { "title": "React", "price": "12000", "img": "https://www.inovex.de/blog/wp-content/uploads/2022/01/one-year-of-react-native.png", "id": "8adf534b-c478-4747-ae8b-57420eb02f62" },
-  { "title": "Vue.js", "price": "8000", "img": "https://timeweb.com/ru/community/article/1d/1d959c23e81024374895da086675b298.jpg", "id": "c32e66d0-c893-44c5-b657-471e08be6e37" }
-]
+[{"title":"React","price":"14000","img":"https://www.inovex.de/blog/wp-content/uploads/2022/01/one-year-of-react-native.png","id":"8adf534b-c478-4747-ae8b-57420eb02f62"},{"title":"Vue.js","price":"15000","img":"https://timeweb.com/ru/community/article/1d/1d959c23e81024374895da086675b298.jpg","id":"c32e66d0-c893-44c5-b657-471e08be6e37"}]
