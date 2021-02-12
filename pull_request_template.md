@@ -12,10 +12,7 @@ What kind of change does this PR introduce?
 - [ ] Feature
 - [ ] Styles 
 - [ ] Tests/lints
-
-## Does this PR introduce a breaking change?
-- [ ] Yes
-- [ ] No
+- [ ] Documentation
 
 ## Links
 - [some url to the task(lesson)](...)
