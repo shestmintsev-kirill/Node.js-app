@@ -1,10 +1,11 @@
 const express = require("express");
-// const path = require("path");
+const path = require("path");
 const exphbs = require("express-handlebars");
 const app = express();
 const homeRoutes = require("./Routes/home");
 const addRoutes = require("./Routes/add");
 const coursesRoutes = require("./Routes/courses");
+const cardRoutes = require("./Routes/card");
 
 //*Setting handlebars
 
@@ -19,11 +20,12 @@ app.set("views", "views");
 
 //*Setting handlebars
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use("/", homeRoutes);
 app.use("/add", addRoutes);
 app.use("/courses", coursesRoutes);
+app.use("/card", cardRoutes);
 
 // app.get("/courses", (req, res) => {
 //   res.render("courses", {
